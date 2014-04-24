@@ -1,4 +1,9 @@
 angularjs-f1feed
 ================
 
-Test application for read f1 feed from ergastAPI
+Test application for read F1 feed from ergastAPI
+
+Init Modules
+------------
+
+<code> npm install </code> in the project directory
