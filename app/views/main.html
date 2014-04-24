@@ -1,0 +1,33 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">F1Feeder <small>with AngularJS</small></h3>
+</div>
+
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+<input type="text" class="form-control" ng-model="nameFilter" placeholder="Search ...">
+</div>
+
+<table class="table table-striped">
+<thead>
+  <tr><th colspan="4">Drivers Championship Standings</th></tr>
+</thead>
+<tbody>
+  <tr ng-repeat="driver in driversList | filter: searchFilter">
+  <td> {{$index + 1}} </td>
+  <td><img ng-src="images/{{driver.Driver.nationality}}.png"/>&nbsp;<a href="#/drivers/{{driver.Driver.driverId}}">
+      {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+  </td>
+  <td>{{driver.Constructors[0].name}}</td>
+  <td>{{driver.points}}</td>
+  </tr>
+</tbody>
+</table>
+
+<div class="footer">
+  <p><span class="glyphicon glyphicon-heart"></span> Daniele Iervolino</p>
+</div>
