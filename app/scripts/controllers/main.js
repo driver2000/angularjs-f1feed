@@ -30,4 +30,12 @@ angular.module('angularjsApp')
     ergastAPIservice.getDriverRaces($scope.id).success(function(response) {
         $scope.races = response.MRData.RaceTable.Races;
     });
+})
+
+.controller('tabsController', function($scope){
+    $scope.tabs = [{
+        title: 'Tab1',
+        content: 'Ciao Ciao'
+    }];
+     $scope.tabs.activeTab = 0;
 });

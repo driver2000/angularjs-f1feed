@@ -5,6 +5,7 @@ angular.module('angularjsApp', [
     'ngResource',
     'ngSanitize',
     'ngRoute',
+    'mgcrea.ngStrap.tab',
     'angularjsApp.services'])
     .config(function($routeProvider) {
     $routeProvider.when('/drivers/:id', {
@@ -14,6 +15,10 @@ angular.module('angularjsApp', [
         .when('/drivers', {
         templateUrl: 'views/main.html',
         controller: 'driversController'
+    })
+        .when('/tabs', {
+        templateUrl: 'views/tabs.html',
+        controller: 'tabsController'
     })
         .otherwise({
         redirectTo: '/drivers'
