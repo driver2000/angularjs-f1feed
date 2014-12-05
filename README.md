@@ -11,4 +11,3 @@ do <code> npm install bower -g </code> then
 Run test app
 ------------
 <code> grunt serve </code>
-
